@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Hobbies Page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Charm:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="title">
+
+            <h1> {{title}} </h1>
+
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-md-6">
+
+                <div class="hobbiesNames" *ngFor='let singleHobby of hobbiesArray ; let i = index'>
+
+                    <p> <span id="ids">{{singleHobby.id}}</span> <span id="connection">~~</span> <span id="names"
+                            appStrikethrough>{{singleHobby. name}}.</span></p>
+
+                    <p> <span id="dueText">due on </span> <span id="date">{{singleHobby.dueDate | date |
+                            uppercase}}</span> </p>
+
+                    <app-hobbies-child1 [singleHobby]='singleHobby' *ngIf='singleHobby.showDetails'
+                        (isComplete)='removeConstruction($event, i)'></app-hobbies-child1>
+
+                    <button class="btn btn-primary" (click)='toggleDetails(i)'>Toggle Details</button>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-6">
+
+                <app-form-child (addHobby) = "addNewConstruction($event)"></app-form-child>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

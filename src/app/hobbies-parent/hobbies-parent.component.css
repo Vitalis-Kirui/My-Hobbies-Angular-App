@@ -1,0 +1,52 @@
+body{
+    background-color: rgb(192, 247, 217);
+    font-family: 'Charm',cursive;
+}
+
+h1 {
+  color: rgb(9, 141, 66);
+  text-transform: uppercase;
+  text-decoration: underline double red;
+  text-align: center;
+  font-size: 40px;
+  font-family: 'Cinzel Decorative',cursive;
+}
+
+#connection{
+    color: red;
+}
+
+#names{
+    color: rgb(38, 0, 255);
+    font-size: 30px;
+    font-weight: 600;
+    font-family: 'Josefin Sans',sans-serif;
+}
+
+#ids{
+    font-size: 30px;
+    font-family:serif;
+    font-weight: 900;
+}
+
+.hobbiesNames{
+    padding-top: 20px;
+}
+
+.container{
+    background-color: rgb(200, 204, 166);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#dueText{
+    font-size: 24px;
+    color: rgb(16, 105, 56);
+}
+
+#date{
+    font-size: 25px;
+    color: rgb(38, 0, 255);
+}
